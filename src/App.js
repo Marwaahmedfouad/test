@@ -35,7 +35,7 @@ import Portfolio from './pages/portfolio/Portfolio';
 import Contact from './pages/contact/Contact';
 function App() {
   return (<>
-  <BrowserRouter>
+<BrowserRouter basename="/test">
   <Navbar/>
   <Themes/>
   <Routes>
