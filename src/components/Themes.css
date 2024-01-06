@@ -1,0 +1,99 @@
+
+.style__switcher {
+    background-color: var(--text-white);
+    position: fixed;
+    left: 0;
+    top: 1%;
+    width: 185px;
+    padding: 11px;
+    /* box-shadow: 0 0 4px hsl(0, 0%, 80%); */
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+    /* background-color: red; */
+}
+
+.show-switcher{
+    transform: translateX(0);
+    transition: all 0.5s ease;
+    /* background-color: rebeccapurple; */
+}
+.show-switcher .style__switcher-toggler,
+.show-switcher .theme__toggler{
+    left: -100%;
+
+}
+.style__switcher,
+.style__switcher-toggler,
+.theme__toggler {
+    border-radius: 0 5px 5px 0;
+    /* background-color: red; */
+}
+
+.style__switcher-items {
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 4px;
+    row-gap: 8px;
+}
+
+.style__switcher-title,
+.style__switcher-toggler,
+.theme__toggler,
+.style__switcher-close {
+    /* background-color: red; */
+    color: hsl(0, 0%, 40%);
+    ;
+}
+
+.style__switcher-title {
+    /* background-color: red; */
+    font-size: var(--small-fot-size);
+    font-weight: var(--weight-600);
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.theme__img {
+    /* background-color: red; */
+    width: 30px;
+    cursor: pointer;
+}
+
+.style__switcher-toggler,
+.theme__toggler {
+    /* background-color: red; */
+    /*mfesh 7aga wa5da relative ezn msh hythark belnesbal l7aga*/
+    position: absolute;
+    left: 100%;
+    height: 50px;
+    width: 50px;
+    font-size: var(--large-fot-size);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 2px gray;
+    background-color: var(--text-white);
+
+}
+
+.style__switcher-toggler {
+    top: 10%;
+}
+
+.theme__toggler {
+    bottom: 10%;
+}
+
+.style__switcher-close {
+    /* background-color: red; */
+    cursor: pointer;
+    /*mfesh 7aga wa5da relative ezn msh hythark belnesbal l7aga*/
+    position: absolute;
+    top: 2%;
+    right: 15px;
+    font-size: var(--h2-fot-size);
+
+}

@@ -1,0 +1,160 @@
+.nav__menu {
+    position: fixed;
+    /*to make side nave cover all screen*/
+    inset-block: 0;
+    /*incase show sidenave cover all screen to make design (marwa)*/
+    /* left: 0; */
+    /*incase hidden side nave and show the main page of route*/
+    left: -100%;
+    background-color: var(--container-color);
+    width: 100%;
+    padding: 60px 30px;
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    /*ease-in-out or ease or linear or ease-in or ease-out*/
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+}
+
+/*(marwa)*/
+.show-menu {
+    left: 0;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 14px;
+}
+
+.nav__icon,
+.nav__name {
+    color: var(--title-color);
+    font-size: 24px;
+}
+
+.nav__name {
+    font-weight: var(--weight-500);
+}
+
+/*incase */
+.active-nav .nav__icon,
+.active-nav .nav__name {
+    color: var(--first-color);
+}
+
+/*********/
+/*background as a button toogle*/
+.nav__toggle {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--container-color);
+    padding: 12px 10px;
+    z-index: 100;
+}
+
+/*el shorat in button toggle*/
+.nav__toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--title-color);
+    margin-bottom: 5px;
+}
+
+/******/
+/*x as a button toggle*/
+.animate-toggle span:first-child {
+    transform: rotate(45deg) translate(6px, 4px);
+}
+
+.animate-toggle span:nth-child(2) {
+    display: none;
+}
+
+.animate-toggle span:last-child {
+    transform: rotate(-45deg) translate(1px, 1px);
+}
+/******/
+@media screen and (min-width:1024px) {
+    /* The all: unset; property resets all properties to their initial values, effectively removing any styles that might be applied to the .nav__menu element.*/
+    .nav__menu {
+        all: unset;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav {
+        position: fixed;
+        /*to take all height of screen*/
+        inset-block: 0;
+        /* background-color: red; */
+        right: 30px;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .nav__item {
+        margin-block: 20px;
+    }
+
+    /* make it like background circle  */
+    .nav__link {
+        padding: 0;
+        border-bottom: none;
+        background-color: var(--container-color);
+        width: 50px;
+        height: 50px;
+        border-radius: 43% 57% 47% 53% / 30% 30% 70% 70%        ;
+        position: relative;
+    }
+
+    .nav__icon {
+        font-size: 20px;
+        margin: auto;
+    }
+
+    .nav__name {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        background-color: var(--first-color);
+        height: 100%;
+        line-height: 50px;
+        padding: 2px 25px 0px 14px;
+        border-radius: 30px;
+        font-size: var(--small-font-size);
+        color: var(--text-white);
+        opacity: 1;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    .nav__link:hover .nav__name {
+        color: var(--text-white);
+        opacity: 1;
+        visibility: visible;
+        border-radius: 30px 0 0 30px;
+        right: 27px;
+    }
+
+    .nav__link:hover,
+    .active-nav {
+        background-color: var(--first-color);
+    }
+
+    .nav__link:hover .nav__icon,
+    .active-nav .nav__icon {
+        color: var(--text-white);
+    }
+}

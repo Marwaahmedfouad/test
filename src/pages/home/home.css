@@ -1,0 +1,75 @@
+.home{
+    grid-template-columns:  7.68fr 4.32fr;
+    align-items: center;
+    /* background-color: var(--first-color); */
+    padding: 50px;
+    height: 100vh;
+}
+
+.home__img {
+        /*y*/
+    height: 80%;
+    /* width: 30vw; */
+    width: 80%;
+        /*x*/
+    object-fit: cover;
+    border-radius:30% 70% 70% 30% / 30% 30% 70% 70%  ;
+    box-shadow: 1px 2px 17px 5px var(--first-color);
+    z-index: 1;
+    animation: floatImage 4s ease-in-out infinite;
+    z-index: -1;
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.home__data{
+    max-width: 600px;
+    margin-inline: auto;
+    padding-top: 20px;  
+}
+
+.home__title {
+    position: relative;
+    font-size: var(--h1-font-size);
+    line-height: 1.24;
+    padding: 0px 0px 30px 50px;
+}
+.home__title span{
+    color: var(--first-color);
+}
+/*****/
+/*to make el shrta el kabl el iam marwa ahmed*/
+.home__title::before{
+content: '';
+position: absolute;
+left: 0;
+top: 22%;
+width: 30px;
+height: 5px;
+border-radius: 10px;
+background-color: var(--first-color);
+}
+/*********/
+.home__description{
+    line-height: 2.125;
+    /* margin-block: 16px 32px; */
+}
+
+.img__style{
+    position: relative;
+}
+.img__style img{
+    position: relative;
+}
+.show-more-button{
+    color: var(--first-color);
+}
+/***************************************/
